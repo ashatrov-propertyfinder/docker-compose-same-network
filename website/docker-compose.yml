@@ -1,0 +1,18 @@
+version: '3.1'
+services:
+  nginx.website.portal.local:
+    image: nginx:1.12.1
+    volumes:
+      - .:/data
+    ports:
+      - 8082:80
+    networks:
+      - portal.local
+  curl.website.portal.local:
+    image: appropriate/curl:latest
+    networks:
+      - portal.local
+
+networks:
+  portal.local:
+    external: true
