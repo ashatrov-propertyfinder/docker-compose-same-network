@@ -1,0 +1,10 @@
+version: '3.1'
+services:
+  nginx.cms.portal.local:
+    image: nginx:1.12.1
+    volumes:
+      - .:/data
+    ports:
+      - 8081:80
+  curl.cms.portal.local:
+    image: appropriate/curl:latest

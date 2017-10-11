@@ -6,13 +6,5 @@ services:
       - .:/data
     ports:
       - 8081:80
-    networks:
-      - portal.local
   curl.cms.portal.local:
     image: appropriate/curl:latest
-    networks:
-      - portal.local
-
-networks:
-  portal.local:
-    external: true

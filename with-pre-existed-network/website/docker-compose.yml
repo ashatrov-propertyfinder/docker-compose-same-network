@@ -6,13 +6,13 @@ services:
       - .:/data
     ports:
       - 8082:80
-    networks:
-      - portal.local
+   networks:
+     - portal.local
   curl.website.portal.local:
     image: appropriate/curl:latest
-    networks:
-      - portal.local
+   networks:
+     - portal.local
 
 networks:
-  portal.local:
-    external: true
+ portal.local:
+   external: true
